@@ -27,8 +27,8 @@ function Invoke-PowerADRecon {
   Write-Host "-------------------------------------------------"
    
   Write-Host "Domain Forests"
-  Get-ForestDomain -Domain $Domain -DomainController $DomainController 
-  Get-DomainTrustMapping -Domain $Domain -DomainController $DomainController 
+  Get-ForestDomain -DomainController $DomainController 
+  Get-DomainTrustMapping -DomainController $DomainController 
   nltest /domain_trusts /server:$DomainController
   Write-Host "-------------------------------------------------"
 
