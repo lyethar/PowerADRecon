@@ -38,7 +38,7 @@ function Invoke-PowerADRecon {
   
   Write-Host "Domain Groups"
   Get-DomainGroup -Domain $Domain -DomainController $DomainController |  select SamAccountName
-  Write-Host "Groups Containing the work Admin"
+  Write-Host "Groups Containing the word Admin"
   Get-DomainGroup -Domain $Domain -DomainController $DomainController | where Name -like "*Admins*" | select SamAccountName
   Write-Host "-------------------------------------------------"
   
