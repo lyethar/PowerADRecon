@@ -73,7 +73,7 @@ function Invoke-PowerADRecon {
   Get-DomainGPO -Properties DisplayName -Domain $Domain -DomainController $DomainController | sort -Property DisplayName
 
   Write-Host "Domain GPO Mapping"
-  Get-DomainGPOLocalGroup -Domain $Domain -DomainController $DomainController | select GPODisplayName, GroupName
+  Get-DomainGPOLocalGroup -DomainController $DomainController | select GPODisplayName, GroupName
   Write-Host "-------------------------------------------------"
 
   Write-Host "Enumerates Machines where a domain or group has local administrative rights" 
