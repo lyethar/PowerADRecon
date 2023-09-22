@@ -8,7 +8,7 @@ function Invoke-PowerADRecon {
         [string]$DomainController,
 
         [Parameter(Mandatory=$true)]
-        [string]$ListeningServer,
+        [string]$ListeningServer
     )
 
   Write-Host "Importing Tooling" 
