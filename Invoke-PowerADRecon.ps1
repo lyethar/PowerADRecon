@@ -42,7 +42,7 @@ function Invoke-PowerADRecon {
   Get-DomainGroup -Domain $Domain -DomainController $DomainController | where Name -like "*Admins*" | select SamAccountName
   Write-Host "-------------------------------------------------"
   
-  rite-Host "Domain Computers"
+  Write-Host "Domain Computers"
   Get-DomainComputer -Properties DnsHostName -Domain $Domain -DomainController $DomainController | sort -Property DnsHostName
   Write-Host "-------------------------------------------------"
 
