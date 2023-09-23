@@ -63,7 +63,7 @@ function Invoke-PowerADRecon {
                 Get-DomainUser -SearchBase $ouDistinguishedName -DomainController $DomainController -Domain $Domain | Select-Object name
 
                 Write-Host "`nGroups Associated with $OU :`n"
-                Get-DomainGroup -SearchBase $ouDistinguishedName -DomainController $DomainController -Domain $Domain -Properties DnsHostName | sort -Property DnsHostName
+                Get-DomainGroup -SearchBase $ouDistinguishedName -DomainController $DomainController -Domain $Domain -Properties DnsHostName | sort -Property name
 
                Write-Host "-------------------------------------------------"
                         }
